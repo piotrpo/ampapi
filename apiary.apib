@@ -247,3 +247,22 @@ Methods allowing one to receive a session token
                 "lead": "Are you looking for a way to engage with your clients; help them optimize their data center operations; and save them substantial money? Are you interested in learning more about an area with strong revenues and rapid growth projections-where IBM and Cisco have established a strong presence in the market? Join us as we present the \"Winning with VersaStack\" webcast series."
             }
         ]
+        
+## Message [/messages/{messageId}?token={token}]
+Get content of given message
+
++ Paramters
+    + messageId (numeric) - id of message
+    + token
+
+### Request content of single message [GET]
+Format of the body will TBD (Base64 encoded HTML?)
+
++ Response 200 (application/json)
+
+        {
+          "id": 1,
+          "published": "2015-09-09T18:25:43.511Z",
+          "title": "entry level test 1",
+          "body": "We’re excited to share the news that OpenDNS is now part of the Cisco family! The acquisition of OpenDNS builds on Cisco’s “Security Everywhere” vision by adding cloud-delivered network security and global threat intelligence to protect any device, anywhere."
+        }
