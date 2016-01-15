@@ -1,0 +1,249 @@
+FORMAT: 1A
+
+# avn
+This is a proposed API for Cisco/Avnet AMP app project
+
+## Access [/login]
+Methods allowing one to receive a session token
+### request session token [POST]
+
++ Request (application/json)
+
+        {
+            "username": "test",
+            "password": "password"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "token": "asda9sf987jhgiouyaisodufy"
+            }
+
+## Registration [/register]
+
+### register user [POST]
+
++ Request (application/json)
+
+        {
+            "company":"ACME Inc.",
+            "email":"sales@acme.com",
+            "firstName":"John",
+            "lastName":"Smith",
+            "partnerLevel":"GOLD",
+            "password":"password",
+            "phone":"1234567890",
+            "workingFunction":"FIELD_SALES"
+        }
+        
++ Response 200 (application/json)
+
+            {
+                "status": "OK",
+                "message": "User registered"
+            }
+
+## Quizzes [/quizzes?token={token}]
+
++ Parameters
+    + token (String) - security token
+
+### Request list of quizzes [GET]
+
++ Response 200 (application/json)
+
+        [
+          {
+            "title":"entry level test 1",
+            "id":1
+          },
+          {
+            "title":"Quiz for a more advanced user",
+            "id":2
+          },
+          {
+            "title":"test 3",
+            "id":3
+          },
+          {
+            "title":"test 4",
+            "id":4
+          },
+          {
+            "title":"test 5",
+            "id":5
+          },
+          {
+            "title":"test 6",
+            "id":6
+          },
+          {
+            "title":"test 7",
+            "id":7
+          },
+          {
+            "title":"test 8",
+            "id":8
+          },
+          {
+            "title":"test 9",
+            "id":9
+          },
+          {
+            "title":"test 10",
+            "id":10
+          }
+        ]
+   
+## Quiz content [/quizzes/{testId}?token={token}]
+
++ Parameters
+    + testId (numeric) - id of the quiz
+    + token (String) - security token
+
+### Request content of single quiz [GET]        
+        
++ Response 200 (application/json)
+
+        {
+          "id": 1,
+          "title": "entry level test 1",
+          "questions": [
+            {
+              "id": 0,
+              "question": "What is the meaning of life?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "Yes",
+                  "isCorrect": true
+                },
+                {
+                  "id": 1,
+                  "value": "No",
+                  "isCorrect": true
+                },
+                {
+                  "id": 2,
+                  "value": "Maybe",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "question": "What is The Answer to the Ultimate Question of Life, The Universe, and Everything?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "41",
+                  "isCorrect": false
+                },
+                {
+                  "id": 1,
+                  "value": "42",
+                  "isCorrect": true
+                },
+                {
+                  "id": 2,
+                  "value": "43",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "question": "Will the first order win?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "Yes",
+                  "isCorrect": false
+                },
+                {
+                  "id": 1,
+                  "value": "No",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "question": "Will the first order win?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "Yes",
+                  "isCorrect": false
+                },
+                {
+                  "id": 1,
+                  "value": "No",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "question": "Will the first order win?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "Yes",
+                  "isCorrect": false
+                },
+                {
+                  "id": 1,
+                  "value": "No",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "question": "Will the first order win?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "Yes",
+                  "isCorrect": false
+                },
+                {
+                  "id": 1,
+                  "value": "No",
+                  "isCorrect": true
+                }
+              ]
+            }
+        
+          ]
+        }
+## Messages [/messages]
+
+### Request list of massage headers [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 1,
+                "title": "OpenDNS is now part of Cisco — Taking Security Everywhere Webcast",
+                "published": "2015-09-09T18:25:43.511Z",
+                "lead": "We’re excited to share the news that OpenDNS is now part of the Cisco family! The acquisition of OpenDNS builds on Cisco’s “Security Everywhere” vision by adding cloud-delivered network security and global threat intelligence to protect any device, anywhere."
+            },
+            {
+                "id": 2,
+                "title": "Cisco Web and Email Security Webinar",
+                "published": "2015-08-12T18:25:43.511Z",
+                "lead": "Join us for this live webcast on August 18, 2015, at 8 a.m. Pacific Time/11 a.m. Eastern Time."
+            },
+            {
+                "id": 3,
+                "title": "Join us for the Winning with VersaStack Webcast Series",
+                "published": "2015-07-30T18:25:43.511Z",
+                "lead": "Are you looking for a way to engage with your clients; help them optimize their data center operations; and save them substantial money? Are you interested in learning more about an area with strong revenues and rapid growth projections-where IBM and Cisco have established a strong presence in the market? Join us as we present the \"Winning with VersaStack\" webcast series."
+            }
+        ]
