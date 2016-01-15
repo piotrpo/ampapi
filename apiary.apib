@@ -221,6 +221,7 @@ Methods allowing one to receive a session token
         
           ]
         }
+        
 ## Messages [/messages]
 
 ### Request list of massage headers [GET]
@@ -249,11 +250,10 @@ Methods allowing one to receive a session token
         ]
         
 ## Message [/messages/{messageId}?token={token}]
-Get content of given message
 
-+ Paramters
-    + messageId (numeric) - id of message
-    + token
++ Parameters
+    + messageId (numeric) - id of requested message
+    + token (String) - security token
 
 ### Request content of single message [GET]
 Format of the body will TBD (Base64 encoded HTML?)
