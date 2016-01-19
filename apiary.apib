@@ -266,3 +266,31 @@ Format of the body will TBD (Base64 encoded HTML?)
           "title": "entry level test 1",
           "body": "We’re excited to share the news that OpenDNS is now part of the Cisco family! The acquisition of OpenDNS builds on Cisco’s “Security Everywhere” vision by adding cloud-delivered network security and global threat intelligence to protect any device, anywhere."
         }
+        
+## Events [/events?token={token}]
+
++ Parameters
+    + token (String) - security token
+    
+### Request list of events [GET]
+
++ Response 200 (application/json)
+
+        [
+          {
+            "dateStart": "2016-01-05T18:00:00.000Z",
+            "dateEnd": "2016-01-06T01:00:00.000Z",
+            "name": "Cisco ASA Express Seminar - Dallas, TX",
+            "description": "his seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
+            "place": "Avnet 2021 Lakeside Blvd Richardson, TX",
+            "lineUp": "Day 1: Cisco ASA NGFW Solution Introduction - Cisco ASA with FirePOWER Policies Malware/File IPS (Snort) Access Control Network Discovery (FireSIGHT) Correlation Day 2: FirePower Continued and ASA Features ASA FirePOWER Services: Positioning and best practices ASA VPN features, positioning and best practices ASA Licensing ASA Cloud Web Security"
+          },
+          {
+            "dateStart": "2016-01-05T18:00:00.000Z",
+            "dateEnd": "2016-01-06T01:00:00.000Z",
+            "name": "Cisco ASA Express Seminar - Dallas, TX",
+            "description": "his seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
+            "place": "Avnet 2021 Lakeside Blvd Richardson, TX",
+            "lineUp": "Day 1: Cisco ASA NGFW Solution Introduction - Cisco ASA with FirePOWER Policies Malware/File IPS (Snort) Access Control Network Discovery (FireSIGHT) Correlation Day 2: FirePower Continued and ASA Features ASA FirePOWER Services: Positioning and best practices ASA VPN features, positioning and best practices ASA Licensing ASA Cloud Web Security"
+          }
+        ]
