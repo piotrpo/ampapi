@@ -294,3 +294,29 @@ Format of the body will TBD (Base64 encoded HTML?)
             "lineUp": "Day 1: Cisco ASA NGFW Solution Introduction - Cisco ASA with FirePOWER Policies Malware/File IPS (Snort) Access Control Network Discovery (FireSIGHT) Correlation Day 2: FirePower Continued and ASA Features ASA FirePOWER Services: Positioning and best practices ASA VPN features, positioning and best practices ASA Licensing ASA Cloud Web Security"
           }
         ]
+        
+## Articles [/articles?token={token}]
+
++ Parameters
+    + token (String) - security token
+    
+### Request list of articles [GET]
+
++ Response 200 (application/json)
+
+        [
+          {
+            "id": 1,
+            "title": "AVNET'S DRIVING SOLUTIONS WEBINAR SERIES",
+            "header": "Avnet’s Driving Solutions webinar series continues with The Internet of Everything and the Impact on Enterprise Applications. Because I know you’re not busy yet, join us on Thursday, October 16th at 10:00 AM PST.",
+            "iconUrl": "http://www.avnetamp.com/media/updated/Articles-BIGimg_060814.png",
+            "category": "EVENTS"
+          },
+          {
+            "id": 1,
+            "title": "CISCO+NETAPP = FLEXPOD AT CISCO LIVE",
+            "header": "There I was, just sitting at my cube pondering, “What’s the #1 ranked integrated infrastructure solution from Cisco and NetApp?” when a coworker walked by and told me about the FlexPod that ran Cisco Live.",
+            "iconUrl": "http://www.avnetamp.com/media/updated/Articles-BIGimg_060214.png",
+            "category": "EVENTS"
+          }
+        ]
