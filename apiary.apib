@@ -46,7 +46,7 @@ Methods allowing one to receive a session token
                 "message": "User registered"
             }
 
-## Quizzes [/quizzes?token={token}]
+## Quizzes [/quizzes{?token}]
 
 + Parameters
     + token (String) - security token
@@ -98,7 +98,7 @@ Methods allowing one to receive a session token
           }
         ]
    
-## Quiz content [/quizzes/{testId}?token={token}]
+## Quiz content [/quizzes/{testId}{?token}]
 
 + Parameters
     + testId (numeric) - id of the quiz
@@ -222,7 +222,10 @@ Methods allowing one to receive a session token
           ]
         }
         
-## Messages [/messages]
+## Messages [/messages{?token}]
+
++ Parameters
+    + token (String) - security token
 
 ### Request list of massage headers [GET]
 
@@ -249,10 +252,9 @@ Methods allowing one to receive a session token
             }
         ]
         
-## Message [/messages/{messageId}?token={token}]
+## Message [/messages/{messageId}{?token}]
 
 + Parameters
-    + messageId (numeric) - id of requested message
     + token (String) - security token
 
 ### Request content of single message [GET]
@@ -267,11 +269,11 @@ Format of the body will TBD (Base64 encoded HTML?)
           "body": "We’re excited to share the news that OpenDNS is now part of the Cisco family! The acquisition of OpenDNS builds on Cisco’s “Security Everywhere” vision by adding cloud-delivered network security and global threat intelligence to protect any device, anywhere."
         }
         
-## Events [/events?token={token}]
+## Events [/events{?token}]
 
 + Parameters
     + token (String) - security token
-    
+
 ### Request list of events [GET]
 
 + Response 200 (application/json)
@@ -295,11 +297,11 @@ Format of the body will TBD (Base64 encoded HTML?)
           }
         ]
         
-## Articles [/articles?token={token}]
+## Articles [/articles{?token}]
 
 + Parameters
     + token (String) - security token
-    
+
 ### Request list of articles [GET]
 
 + Response 200 (application/json)
@@ -318,5 +320,35 @@ Format of the body will TBD (Base64 encoded HTML?)
             "header": "There I was, just sitting at my cube pondering, “What’s the #1 ranked integrated infrastructure solution from Cisco and NetApp?” when a coworker walked by and told me about the FlexPod that ran Cisco Live.",
             "iconUrl": "http://www.avnetamp.com/media/updated/Articles-BIGimg_060214.png",
             "category": "EVENTS"
+          }
+        ]
+        
+## Videos [/resources/videos{?token}]
+
+Available videos
+
++ Parameters
+    + token (String) - security token
+
+### Request list of videos [GET]
+
++ Response 200 (application/json)
+
+        [
+          {
+            "id": 1,
+            "title": "NETAPP FLEXPOD EXPRESS VIDEO",
+            "header": "This time lapse video highlight's Avnet's FlexPod integration services.",
+            "iconUrl": "http://www.avnetamp.com/media/updated/Articles-BIGimg_060814.png",
+            "videoUrl": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+            "category": "SECURITY"
+          },
+          {
+            "id": 1,
+            "title": "Cisco FlexPod Express Video",
+            "header": "This time lapse video highlight's Avnet's FlexPod integration services.",
+            "iconUrl": "http://www.avnetamp.com/media/updated/Articles-BIGimg_060814.png",
+            "videoUrl": "http://www.avnetamp.com/internal/tools_resources/video/238?bba=&fv=1"
+            "category": "SECURITY"
           }
         ]
