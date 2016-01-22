@@ -22,6 +22,11 @@ Methods allowing one to receive a session token
                 "token": "asda9sf987jhgiouyaisodufy"
             }
 
++ Response 404 
+        
+        User / Password pair invalid
+
+
 ## Registration [/register]
 
 ### register user [POST]
@@ -97,7 +102,11 @@ Methods allowing one to receive a session token
             "id":10
           }
         ]
-   
+        
++ Response 444
+
+        Token not valid
+
 ## Quiz content [/quizzes/{testId}{?token}]
 
 + Parameters
@@ -222,6 +231,11 @@ Methods allowing one to receive a session token
           ]
         }
         
++ Response 444
+
+        Token not valid
+
+
 ## Messages [/messages{?token}]
 
 + Parameters
@@ -251,7 +265,11 @@ Methods allowing one to receive a session token
                 "lead": "Are you looking for a way to engage with your clients; help them optimize their data center operations; and save them substantial money? Are you interested in learning more about an area with strong revenues and rapid growth projections-where IBM and Cisco have established a strong presence in the market? Join us as we present the \"Winning with VersaStack\" webcast series."
             }
         ]
-        
+
++ Response 444
+
+        Token not valid
+
 ## Message [/messages/{messageId}{?token}]
 
 + Parameters
@@ -268,6 +286,10 @@ Format of the body will TBD (Base64 encoded HTML?)
           "title": "entry level test 1",
           "body": "We’re excited to share the news that OpenDNS is now part of the Cisco family! The acquisition of OpenDNS builds on Cisco’s “Security Everywhere” vision by adding cloud-delivered network security and global threat intelligence to protect any device, anywhere."
         }
+
++ Response 444
+
+        Token not valid
         
 ## Events [/events{?token}]
 
@@ -298,7 +320,11 @@ Format of the body will TBD (Base64 encoded HTML?)
             "category": "CLOUD"
           }
         ]
-        
+
++ Response 444
+
+        Token not valid
+       
 ## Articles [/articles{?token}]
 
 + Parameters
@@ -324,7 +350,11 @@ Format of the body will TBD (Base64 encoded HTML?)
             "category": "EVENTS"
           }
         ]
-        
+
++ Response 444
+
+        Token not valid
+
 ## Videos [/resources/videos{?token}]
 
 Available videos
@@ -354,3 +384,7 @@ Available videos
             "category": "SECURITY"
           }
         ]
+        
++ Response 444
+
+        Token not valid
