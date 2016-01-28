@@ -103,7 +103,7 @@ Methods allowing one to receive a session token
           }
         ]
         
-+ Response 444
++ Response 401
 
         Token not valid
 
@@ -231,7 +231,7 @@ Methods allowing one to receive a session token
           ]
         }
         
-+ Response 444
++ Response 401
 
         Token not valid
 
@@ -266,7 +266,7 @@ Methods allowing one to receive a session token
             }
         ]
 
-+ Response 444
++ Response 401
 
         Token not valid
 
@@ -287,7 +287,7 @@ Format of the body will TBD (Base64 encoded HTML?)
           "body": "We’re excited to share the news that OpenDNS is now part of the Cisco family! The acquisition of OpenDNS builds on Cisco’s “Security Everywhere” vision by adding cloud-delivered network security and global threat intelligence to protect any device, anywhere."
         }
 
-+ Response 444
++ Response 401
 
         Token not valid
         
@@ -321,7 +321,7 @@ Format of the body will TBD (Base64 encoded HTML?)
           }
         ]
 
-+ Response 444
++ Response 401
 
         Token not valid
        
@@ -385,6 +385,212 @@ Available videos
           }
         ]
         
-+ Response 444
++ Response 401
 
+        Token not valid
+        
+## Own profile [/users/me/profile{?token}]
+
++ Parameters
+    + token (String) - security token
+
+### Update own profile [PUT]
+
++ Request (application/json)
+
+        {
+          "accountManagerId": 0,
+          "certificates": {
+            "ciscoNotsure": true,
+            "cse": false,
+            "dca": false,
+            "dcucam": true,
+            "dcucd": false,
+            "dcuci": true,
+            "dcuct": false,
+            "dcuft": false,
+            "emcNotsure": false,
+            "emcapd": false,
+            "emcca": true,
+            "emcdca": false,
+            "emcds": true,
+            "emcie": false,
+            "emcpe": false,
+            "emcsa": false,
+            "emcsya": true,
+            "emcta": false,
+            "hdsca": true,
+            "hdsci": false,
+            "hdscp": true,
+            "hdscsm": false,
+            "hdscss": false,
+            "hdssq": false,
+            "hdsstc": false,
+            "hitachiNotsure": false,
+            "naip": false,
+            "nasa": false,
+            "nasap": false,
+            "nasep": false,
+            "nasp": false,
+            "nasvp": false,
+            "natsp": false,
+            "navdip": false,
+            "ncda": false,
+            "ncie": false,
+            "netAppNotsure": false,
+            "netappase": false
+          },
+          "interests": {
+            "asigra": false,
+            "backupAndRecovery": false,
+            "bussinessApplications": true,
+            "ciscoPortfolio": false,
+            "ciscoServices": false,
+            "cloud": false,
+            "convergedInfrastructure": false,
+            "dataCenter": false,
+            "flexpodDatacenter": false,
+            "flexpodExpress": false,
+            "flexpodSap": true,
+            "flexpodSelect": false,
+            "hitachiUcp": false,
+            "managedServices": false,
+            "networking": true,
+            "numberOfLocations": 5,
+            "otherInterests": "some text",
+            "otherTrainigs": "",
+            "security": false,
+            "serversComputing": false,
+            "storaServerSolution": false,
+            "storage": true,
+            "vBlock": true,
+            "virtualization": false,
+            "vspex": false
+          },
+          "other": {
+            "dell": true,
+            "facebook": true,
+            "googlePlus": true,
+            "hp": false,
+            "ibm": false,
+            "linkedIn": true,
+            "otherVendors": true,
+            "twitter": false,
+            "youTube": true
+          },
+          "company": "ACME",
+          "email": "john.s@acme.com",
+          "firstName": "John",
+          "lastName": "Smith",
+          "partnerLevel": "REGISTERED",
+          "phone": "123456789",
+          "workingFunction": "FIELD_SALES"
+        }
+
++ Response 200
+
+        {
+            "message": "Operation successful",
+            "status": 200
+        }
+        
++ Response 401
+        
+        Token not valid
+
+### Get own profile [GET]
+
++ Response 200 (application/json)
+
+        {
+          "accountManagerId": 0,
+          "certificates": {
+            "ciscoNotsure": true,
+            "cse": false,
+            "dca": false,
+            "dcucam": true,
+            "dcucd": false,
+            "dcuci": true,
+            "dcuct": false,
+            "dcuft": false,
+            "emcNotsure": false,
+            "emcapd": false,
+            "emcca": true,
+            "emcdca": false,
+            "emcds": true,
+            "emcie": false,
+            "emcpe": false,
+            "emcsa": false,
+            "emcsya": true,
+            "emcta": false,
+            "hdsca": true,
+            "hdsci": false,
+            "hdscp": true,
+            "hdscsm": false,
+            "hdscss": false,
+            "hdssq": false,
+            "hdsstc": false,
+            "hitachiNotsure": false,
+            "naip": false,
+            "nasa": false,
+            "nasap": false,
+            "nasep": false,
+            "nasp": false,
+            "nasvp": false,
+            "natsp": false,
+            "navdip": false,
+            "ncda": false,
+            "ncie": false,
+            "netAppNotsure": false,
+            "netappase": false
+          },
+          "interests": {
+            "asigra": false,
+            "backupAndRecovery": false,
+            "bussinessApplications": true,
+            "ciscoPortfolio": false,
+            "ciscoServices": false,
+            "cloud": false,
+            "convergedInfrastructure": false,
+            "dataCenter": false,
+            "flexpodDatacenter": false,
+            "flexpodExpress": false,
+            "flexpodSap": true,
+            "flexpodSelect": false,
+            "hitachiUcp": false,
+            "managedServices": false,
+            "networking": true,
+            "numberOfLocations": 5,
+            "otherInterests": "some text",
+            "otherTrainigs": "",
+            "security": false,
+            "serversComputing": false,
+            "storaServerSolution": false,
+            "storage": true,
+            "vBlock": true,
+            "virtualization": false,
+            "vspex": false
+          },
+          "other": {
+            "dell": true,
+            "facebook": true,
+            "googlePlus": true,
+            "hp": false,
+            "ibm": false,
+            "linkedIn": true,
+            "otherVendors": true,
+            "twitter": false,
+            "youTube": true
+          },
+          "company": "ACME",
+          "email": "john.s@acme.com",
+          "firstName": "John",
+          "lastName": "Smith",
+          "partnerLevel": "REGISTERED",
+          "phone": "123456789",
+          "workingFunction": "FIELD_SALES"
+        }
+
++ Response 401
+        
         Token not valid
