@@ -594,3 +594,178 @@ Available videos
 + Response 401
         
         Token not valid
+
+## Resource [/resources{?resourceType}{?token}]
+
++ Parameters
+    + resourceType (String) - type of resource document, video
+    + token (String) - security token
+
+### Request list of Resources [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 1,
+                "name": "NETAPP FLEXPOD EXPRESS VIDEO",
+                "type": "1",
+                "url": "https://www.youtube.com/watch?v=6RblcQLXwHw",
+                "category": "Non"
+            },
+            {
+                "id": 2,
+                "name": "Tralalala Video ya!",
+                "type": "1",
+                "url": "https://www.youtube.com/watch?v=aKTWpcRGcjA",
+                "category": "Non"
+            },
+            {
+                "id": 3,
+                "name": "Video",
+                "type": "1",
+                "url": "https://www.youtube.com/watch?v=oMUDyvhSkf4",
+                "category": "Non"
+            },
+            {
+                "id": 4,
+                "name": "Tralalala document ya!",
+                "type": "0",
+                "url": "https://www.youtube.com/watch?v=aKTWpcRGcjA",
+                "category": "critical"
+            },
+            {
+                "id": 5,
+                "name": "document",
+                "type": "0",
+                "url": "http://www.avnetamp.com/flow/show_media/355",
+                "category": "critical"
+            },
+            {
+                "id": 6,
+                "name": "Tralalala document ya!",
+                "type": "0",
+                "url": "http://www.avnetamp.com/flow/show_media/356",
+                "category": "critical"
+            },
+            {
+                "id": 7,
+                "name": "Tralalala document ya!",
+                "type": "0",
+                "url": "http://www.avnetamp.com/flow/show_media/357",
+                "category": "critical"
+            },
+            {
+                "id": 8,
+                "name": "Tralalala document ya!",
+                "type": "0",
+                "url": "http://www.avnetamp.com/flow/show_media/358",
+                "category": "critical"
+            },
+            {
+                "id": 9,
+                "name": "Tralalala document ya!",
+                "type": "0",
+                "url": "http://www.avnetamp.com/flow/show_media/359",
+                "category": "additional"
+            },
+            {
+                "id": 10,
+                "name": "Tralalala document ya!",
+                "type": "0",
+                "url": "http://www.avnetamp.com/flow/show_media/360",
+                "category": "additional"
+            },
+            {
+                "id": 11,
+                "name": "Tralalala document ya!",
+                "type": "0",
+                "url": "http://www.avnetamp.com/flow/show_media/361",
+                "category": "additional"
+            }
+        ]
+        
+
++ Response 401
+
+        Token not valid
+
+## Enablement tracks [/tracks{?token}]
+
++ Parameters
+    + token (String) - security token
+
+### Request tracks content for current user [GET]
+
++ Response 200 (application/json)
+
+        [
+          {
+            "id": 0,
+            "name": "Category A",
+            "permissionGranted": false,
+            "tracks": [
+              {
+                "alreadyPassed": false,
+                "attemptsLast": 0,
+                "previousAttempts": 0,
+                "quizId": 0,
+                "trackId": 0,
+                "trackName": "Track name a1"
+              },
+              {
+                "alreadyPassed": false,
+                "attemptsLast": 0,
+                "previousAttempts": 0,
+                "quizId": 0,
+                "trackId": 0,
+                "trackName": "Track name a2"
+              },
+              {
+                "alreadyPassed": false,
+                "attemptsLast": 0,
+                "previousAttempts": 0,
+                "quizId": 0,
+                "trackId": 0,
+                "trackName": "Track name a3"
+              }
+            ]
+          },
+          {
+            "id": 0,
+            "name": "Category B",
+            "permissionGranted": false,
+            "tracks": [
+              {
+                "alreadyPassed": false,
+                "attemptsLast": 0,
+                "previousAttempts": 0,
+                "quizId": 0,
+                "trackId": 0,
+                "trackName": "Track name b1"
+              },
+              {
+                "alreadyPassed": false,
+                "attemptsLast": 0,
+                "previousAttempts": 0,
+                "quizId": 0,
+                "trackId": 0,
+                "trackName": "Track name b2"
+              },
+              {
+                "alreadyPassed": false,
+                "attemptsLast": 0,
+                "previousAttempts": 0,
+                "quizId": 0,
+                "trackId": 0,
+                "trackName": "Track name b3"
+              }
+            ]
+          }
+        ]
+
++ Response 401
+
+        Wrong token
+
+
