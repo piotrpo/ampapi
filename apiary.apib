@@ -598,7 +598,7 @@ Available videos
 ## Resource [/resources{?resourceType}{?token}]
 
 + Parameters
-    + resourceType (String) - type of resource document, video
+    + resourceType (optional, String) - type of resource document, video, link if not specified retun all types
     + token (String) - security token
 
 ### Request list of Resources [GET]
@@ -709,10 +709,10 @@ Available videos
                 "additionalDocuments": [
                   {
                     "category": "SECURITY",
-                    "id": 1,
-                    "name": "Video",
+                    "id": 0,
+                    "name": "Test pptx",
                     "type": 0,
-                    "url": "https://www.youtube.com/watch?v\u003dKzV_UCQFY6w"
+                    "url": "dev-builds.libreoffice.org/tmp/test.pptx"
                   }
                 ],
                 "alreadyPassed": false,
@@ -721,9 +721,9 @@ Available videos
                   {
                     "category": "SECURITY",
                     "id": 1,
-                    "name": "Video",
+                    "name": "test pdf",
                     "type": 0,
-                    "url": "https://www.youtube.com/watch?v\u003dKzV_UCQFY6w"
+                    "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
                   }
                 ],
                 "previousAttempts": 0,
@@ -733,7 +733,7 @@ Available videos
                 "videos": [
                   {
                     "category": "SECURITY",
-                    "id": 1,
+                    "id": 2,
                     "name": "Video",
                     "type": 0,
                     "url": "https://www.youtube.com/watch?v\u003dKzV_UCQFY6w"
