@@ -26,7 +26,6 @@ Methods allowing one to receive a session token
         
         User / Password pair invalid
 
-
 ## Registration [/register]
 
 ### register user [POST]
@@ -234,6 +233,10 @@ Methods allowing one to receive a session token
 + Response 401
 
         Token not valid
+        
++ Response 404
+
+        Resource not found
 
 
 ## Messages [/messages{?token}]
@@ -270,6 +273,10 @@ Methods allowing one to receive a session token
 
         Token not valid
 
++ Response 404
+
+        Resource not found
+
 ## Message [/messages/{messageId}{?token}]
 
 + Parameters
@@ -291,6 +298,10 @@ Format of the body will TBD (Base64 encoded HTML?)
 
         Token not valid
         
++ Response 404
+
+        Resource not found
+        
 ## Events [/events{?token}]
 
 + Parameters
@@ -302,6 +313,7 @@ Format of the body will TBD (Base64 encoded HTML?)
 
         [
           {
+            "id":1,
             "dateStart": "2016-01-05T18:00:00.000Z",
             "dateEnd": "2016-01-06T01:00:00.000Z",
             "name": "Cisco ASA Express Seminar - Dallas, TX",
@@ -311,6 +323,7 @@ Format of the body will TBD (Base64 encoded HTML?)
             "category": "WEBINARS"
           },
           {
+            "id":2,
             "dateStart": "2016-01-05T18:00:00.000Z",
             "dateEnd": "2016-01-06T01:00:00.000Z",
             "name": "Cisco ASA Express Seminar - Dallas, TX",
@@ -324,6 +337,36 @@ Format of the body will TBD (Base64 encoded HTML?)
 + Response 401
 
         Token not valid
+       
+       
+## Event details [/events/{id}{?token}]
+
++ Parameters
+    + token (String) - security token
+    + id (String) - id of event
+
+### Request single event [GET]
+
++ Response 200 (application/json)
+
+        {
+            "id":1,
+            "dateStart": "2016-01-05T18:00:00.000Z",
+            "dateEnd": "2016-01-06T01:00:00.000Z",
+            "name": "Cisco ASA Express Seminar - Dallas, TX",
+            "description": "his seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
+            "place": "Avnet 2021 Lakeside Blvd Richardson, TX",
+            "lineUp": "Day 1: Cisco ASA NGFW Solution Introduction - Cisco ASA with FirePOWER Policies Malware/File IPS (Snort) Access Control Network Discovery (FireSIGHT) Correlation Day 2: FirePower Continued and ASA Features ASA FirePOWER Services: Positioning and best practices ASA VPN features, positioning and best practices ASA Licensing ASA Cloud Web Security",
+            "category": "WEBINARS"
+        }
+        
++ Response 403
+        
+        Token not valid
+        
++ Response 404
+
+        Resource not found
        
 ## Articles [/articles{?token}]
 
@@ -795,4 +838,22 @@ Available videos
 
         Wrong token
 
+
+## Token Valid [/token]
+Checking if the token is still valid
+### request session token [POST]
+
++ Request (application/json)
+
+        {
+            "token": "asda9sf987jhgiouyaisodufy"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "token": "asda9sf987jhgiouyaisodufy"
+            }
 
