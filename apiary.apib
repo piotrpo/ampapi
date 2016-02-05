@@ -1,4 +1,5 @@
 FORMAT: 1A
+HOST: http://ampapi.com
 
 # avn
 This is a proposed API for Cisco/Avnet AMP app project
@@ -55,56 +56,6 @@ Methods allowing one to receive a session token
 + Parameters
     + token (String) - security token
 
-### Request list of quizzes [GET]
-
-+ Response 200 (application/json)
-
-        [
-          {
-            "title":"entry level test 1",
-            "id":1
-          },
-          {
-            "title":"Quiz for a more advanced user",
-            "id":2
-          },
-          {
-            "title":"test 3",
-            "id":3
-          },
-          {
-            "title":"test 4",
-            "id":4
-          },
-          {
-            "title":"test 5",
-            "id":5
-          },
-          {
-            "title":"test 6",
-            "id":6
-          },
-          {
-            "title":"test 7",
-            "id":7
-          },
-          {
-            "title":"test 8",
-            "id":8
-          },
-          {
-            "title":"test 9",
-            "id":9
-          },
-          {
-            "title":"test 10",
-            "id":10
-          }
-        ]
-        
-+ Response 401
-
-        Token not valid
 
 ## Quiz content [/quizzes/{testId}{?token}]
 
@@ -281,6 +232,7 @@ Methods allowing one to receive a session token
 
 + Parameters
     + token (String) - security token
+    + messageId (String) - id of the message
 
 ### Request content of single message [GET]
 Format of the body will TBD (Base64 encoded HTML?)
@@ -368,70 +320,7 @@ Format of the body will TBD (Base64 encoded HTML?)
 
         Resource not found
        
-## Articles [/articles{?token}]
 
-+ Parameters
-    + token (String) - security token
-
-### Request list of articles [GET]
-
-+ Response 200 (application/json)
-
-        [
-          {
-            "id": 1,
-            "title": "AVNET'S DRIVING SOLUTIONS WEBINAR SERIES",
-            "header": "Avnet’s Driving Solutions webinar series continues with The Internet of Everything and the Impact on Enterprise Applications. Because I know you’re not busy yet, join us on Thursday, October 16th at 10:00 AM PST.",
-            "iconUrl": "http://www.avnetamp.com/media/updated/Articles-BIGimg_060814.png",
-            "category": "EVENTS"
-          },
-          {
-            "id": 1,
-            "title": "CISCO+NETAPP = FLEXPOD AT CISCO LIVE",
-            "header": "There I was, just sitting at my cube pondering, “What’s the #1 ranked integrated infrastructure solution from Cisco and NetApp?” when a coworker walked by and told me about the FlexPod that ran Cisco Live.",
-            "iconUrl": "http://www.avnetamp.com/media/updated/Articles-BIGimg_060214.png",
-            "category": "EVENTS"
-          }
-        ]
-
-+ Response 444
-
-        Token not valid
-
-## Videos [/resources/videos{?token}]
-
-Available videos
-
-+ Parameters
-    + token (String) - security token
-
-### Request list of videos [GET]
-
-+ Response 200 (application/json)
-
-        [
-          {
-            "id": 1,
-            "title": "NETAPP FLEXPOD EXPRESS VIDEO",
-            "header": "This time lapse video highlight's Avnet's FlexPod integration services.",
-            "iconUrl": "http://www.avnetamp.com/media/updated/Articles-BIGimg_060814.png",
-            "videoUrl": "https://www.youtube.com/watch?v=ewUTqW5ntqM",
-            "category": "SECURITY"
-          },
-          {
-            "id": 1,
-            "title": "Cisco FlexPod Express Video",
-            "header": "This time lapse video highlight's Avnet's FlexPod integration services.",
-            "iconUrl": "http://www.avnetamp.com/media/updated/Articles-BIGimg_060814.png",
-            "videoUrl": "https://www.youtube.com/watch?v=DJponlkm1PA",
-            "category": "SECURITY"
-          }
-        ]
-        
-+ Response 401
-
-        Token not valid
-        
 ## Own profile [/users/me/profile{?token}]
 
 + Parameters
@@ -638,7 +527,7 @@ Available videos
         
         Token not valid
 
-## Resource [/resources{?resourceType}{?token}]
+## Resources [/resources{?resourceType}{?token}]
 
 + Parameters
     + resourceType (optional, String) - type of resource document, video, all
