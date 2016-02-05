@@ -530,7 +530,7 @@ Format of the body will TBD (Base64 encoded HTML?)
 ## Resources [/resources{?resourceType}{?token}]
 
 + Parameters
-    + resourceType (optional, String) - type of resource document, video, all
+    + resourceType (optional, String) - type of resource document|video|link
     + token (String) - security token
 
 ### Request list of Resources [GET]
@@ -726,23 +726,3 @@ Format of the body will TBD (Base64 encoded HTML?)
 + Response 401
 
         Wrong token
-
-
-## Token Valid [/token]
-Checking if the token is still valid
-### request session token [POST]
-
-+ Request (application/json)
-
-        {
-            "token": "asda9sf987jhgiouyaisodufy"
-        }
-
-+ Response 200 (application/json)
-
-    + Body
-    
-            {
-                "token": "asda9sf987jhgiouyaisodufy"
-            }
-
