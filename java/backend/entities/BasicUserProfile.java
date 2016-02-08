@@ -39,8 +39,8 @@ public class BasicUserProfile
     /**
      * Working function
      */
-    @SerializedName("workingFunction")
-    public WorkingFunction workingFunction;
+    @SerializedName("jobFunction")
+    public BasicUserProfile.jobFunction jobFunction;
 
     /**
      * Parnership level
@@ -58,7 +58,7 @@ public class BasicUserProfile
     /**
      * Enumerated values for working function
      */
-    public enum WorkingFunction
+    public enum jobFunction
     {
         FIELD_SALES("Field Sales"),
         INSIDE_SALES("Inside Sales"),
@@ -71,7 +71,7 @@ public class BasicUserProfile
         TECHNICAL("Technical");
 
         private String displayName;
-        WorkingFunction(String displayName)
+        jobFunction(String displayName)
         {
             this.displayName = displayName;
         }

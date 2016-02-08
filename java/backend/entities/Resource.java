@@ -41,6 +41,12 @@ public class Resource
     public ResourceCategory category;
 
     /**
+     * Indicates how to depict this item on the screen 0 - standard 1 - featured
+     */
+    @SerializedName("priority")
+    public int priority;
+
+    /**
      * Enumerated resource's categories
      */
     public enum ResourceCategory

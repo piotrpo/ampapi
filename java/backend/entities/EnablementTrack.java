@@ -45,8 +45,8 @@ public class EnablementTrack
     /**
      * Number of attempts left
      */
-    @SerializedName("attemptsLast")
-    public int attemptsLast;
+    @SerializedName("attemptsLeft")
+    public int attemptsLeft;
 
     /**
      * List of associated critical documents
