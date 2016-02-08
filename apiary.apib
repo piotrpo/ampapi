@@ -41,7 +41,7 @@ Methods allowing one to receive a session token
             "partnerLevel":"GOLD",
             "password":"password",
             "phone":"1234567890",
-            "workingFunction":"FIELD_SALES"
+            "jobFunction":"FIELD_SALES"
         }
         
 + Response 200 (application/json)
@@ -530,7 +530,7 @@ Format of the body will TBD (Base64 encoded HTML?)
 ## Resources [/resources{?resourceType}{?token}]
 
 + Parameters
-    + resourceType (optional, String) - type of resource document, video, all
+    + resourceType (optional, String) - type of resource document|video|link
     + token (String) - security token
 
 ### Request list of Resources [GET]
@@ -541,78 +541,89 @@ Format of the body will TBD (Base64 encoded HTML?)
             {
                 "id": 1,
                 "name": "NETAPP FLEXPOD EXPRESS VIDEO",
-                "type": "1",
+                "type": 1,
                 "url": "https://www.youtube.com/watch?v=6RblcQLXwHw",
+                "priority": 0,
                 "category": "Non"
             },
             {
                 "id": 2,
                 "name": "Tralalala Video ya!",
-                "type": "1",
+                "type": 1,
                 "url": "https://www.youtube.com/watch?v=aKTWpcRGcjA",
+                "priority": 1,
                 "category": "Non"
             },
             {
                 "id": 3,
                 "name": "Video",
-                "type": "1",
+                "type": 1,
                 "url": "https://www.youtube.com/watch?v=oMUDyvhSkf4",
+                "priority": 0,
                 "category": "Non"
             },
             {
                 "id": 4,
                 "name": "Tralalala document ya!",
-                "type": "0",
+                "type": 0,
                 "url": "https://www.youtube.com/watch?v=aKTWpcRGcjA",
+                "priority": 0,
                 "category": "critical"
             },
             {
                 "id": 5,
                 "name": "document",
-                "type": "0",
+                "type": 0,
                 "url": "http://www.avnetamp.com/flow/show_media/355",
+                "priority": 0,
                 "category": "critical"
             },
             {
                 "id": 6,
                 "name": "Tralalala document ya!",
-                "type": "0",
+                "type": 0,
                 "url": "http://www.avnetamp.com/flow/show_media/356",
+                "priority": 0,
                 "category": "critical"
             },
             {
                 "id": 7,
                 "name": "Tralalala document ya!",
-                "type": "0",
+                "type": 0,
                 "url": "http://www.avnetamp.com/flow/show_media/357",
+                "priority": 0,
                 "category": "critical"
             },
             {
                 "id": 8,
                 "name": "Tralalala document ya!",
-                "type": "0",
+                "type": 0,
                 "url": "http://www.avnetamp.com/flow/show_media/358",
+                "priority": 0,
                 "category": "critical"
             },
             {
                 "id": 9,
                 "name": "Tralalala document ya!",
-                "type": "0",
+                "type": 0,
                 "url": "http://www.avnetamp.com/flow/show_media/359",
+                "priority": 0,
                 "category": "additional"
             },
             {
                 "id": 10,
                 "name": "Tralalala document ya!",
-                "type": "0",
+                "type": 0,
                 "url": "http://www.avnetamp.com/flow/show_media/360",
+                "priority": 0,
                 "category": "additional"
             },
             {
                 "id": 11,
                 "name": "Tralalala document ya!",
-                "type": "0",
+                "type": 0,
                 "url": "http://www.avnetamp.com/flow/show_media/361",
+                "priority": 0,
                 "category": "additional"
             }
         ]
@@ -726,23 +737,3 @@ Format of the body will TBD (Base64 encoded HTML?)
 + Response 401
 
         Wrong token
-
-
-## Token Valid [/token]
-Checking if the token is still valid
-### request session token [POST]
-
-+ Request (application/json)
-
-        {
-            "token": "asda9sf987jhgiouyaisodufy"
-        }
-
-+ Response 200 (application/json)
-
-    + Body
-    
-            {
-                "token": "asda9sf987jhgiouyaisodufy"
-            }
-
