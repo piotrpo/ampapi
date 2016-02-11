@@ -1,10 +1,10 @@
-package avnet.toolla.net.avnet.communication.backend.entities;
+package net.toolla.backend.entities;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import avnet.toolla.net.avnet.ui.fragments.mapper.UiHint;
-import avnet.toolla.net.avnet.ui.fragments.mapper.SectionHeaderData;
+import net.toolla.datamapper.UiHint;
+import net.toolla.datamapper.SectionHeaderData;
 
 /**
  * Part of extended user profile

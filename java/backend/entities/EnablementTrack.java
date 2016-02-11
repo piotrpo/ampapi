@@ -1,4 +1,4 @@
-package avnet.toolla.net.avnet.communication.backend.entities;
+package net.toolla.backend.entities;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -29,12 +29,6 @@ public class EnablementTrack
      */
     @SerializedName("alreadyPassed")
     public boolean alreadyPassed;
-
-    /**
-     * Id of quiz associated with this track
-     */
-    @SerializedName("quizId")
-    public int quizId;
 
     /**
      * Number of previous attempts to pass the exam

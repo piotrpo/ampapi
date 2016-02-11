@@ -1,4 +1,4 @@
-package avnet.toolla.net.avnet.communication.backend.entities;
+package net.toolla.backend.entities;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -40,7 +40,7 @@ public class BasicUserProfile
      * Working function
      */
     @SerializedName("jobFunction")
-    public BasicUserProfile.jobFunction jobFunction;
+    public JobFunction jobFunction;
 
     /**
      * Parnership level
@@ -58,7 +58,7 @@ public class BasicUserProfile
     /**
      * Enumerated values for working function
      */
-    public enum jobFunction
+    public enum JobFunction
     {
         FIELD_SALES("Field Sales"),
         INSIDE_SALES("Inside Sales"),
@@ -71,7 +71,7 @@ public class BasicUserProfile
         TECHNICAL("Technical");
 
         private String displayName;
-        jobFunction(String displayName)
+        JobFunction(String displayName)
         {
             this.displayName = displayName;
         }

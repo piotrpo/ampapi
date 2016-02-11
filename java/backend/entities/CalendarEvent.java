@@ -1,4 +1,4 @@
-package avnet.toolla.net.avnet.communication.backend.entities;
+package net.toolla.backend.entities;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -6,6 +6,7 @@ import java.util.Date;
 
 /**
  * Created by piotrpotulski on 19/01/16.
+ * Entity class for calendar event
  */
 public class CalendarEvent
 {
@@ -48,14 +49,21 @@ public class CalendarEvent
     /**
      * Event's agenda
      */
-    @SerializedName("lineUp")
-    public String lineUp;
+    @SerializedName("agenda")
+    public String agenda;
 
     /**
      * Category this event belongs to
      */
     @SerializedName("category")
     public Category category;
+
+    /**
+     * Url pointing web page allowing to register for this event
+     */
+    @SerializedName("registerUrl")
+    public String registerUrl;
+
 
     public enum Category
     {

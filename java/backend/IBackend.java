@@ -1,17 +1,17 @@
-package avnet.toolla.net.avnet.communication.backend;
+package net.toolla.backend;
 
-import avnet.toolla.net.avnet.communication.DefaultCallback;
-import avnet.toolla.net.avnet.communication.backend.entities.BasicUserProfile;
-import avnet.toolla.net.avnet.communication.backend.entities.CalendarEvent;
-import avnet.toolla.net.avnet.communication.backend.entities.CallendarEventsCollection;
-import avnet.toolla.net.avnet.communication.backend.entities.Credentials;
-import avnet.toolla.net.avnet.communication.backend.entities.EnablementTracksCollection;
-import avnet.toolla.net.avnet.communication.backend.entities.Message;
-import avnet.toolla.net.avnet.communication.backend.entities.MessageHeadersCollection;
-import avnet.toolla.net.avnet.communication.backend.entities.QuizContent;
-import avnet.toolla.net.avnet.communication.backend.entities.ResourcesCollection;
-import avnet.toolla.net.avnet.communication.backend.entities.Token;
-import avnet.toolla.net.avnet.communication.backend.entities.UserProfile;
+import net.toolla.backend.entities.BasicUserProfile;
+import net.toolla.backend.entities.CalendarEvent;
+import net.toolla.backend.entities.CalendarEventsCollection;
+import net.toolla.backend.entities.Credentials;
+import net.toolla.backend.entities.EnablementTracksCollection;
+import net.toolla.backend.entities.Message;
+import net.toolla.backend.entities.MessageHeadersCollection;
+import net.toolla.backend.entities.QuizContent;
+import net.toolla.backend.entities.ResourcesCollection;
+import net.toolla.backend.entities.Token;
+import net.toolla.backend.entities.UserProfile;
+
 import retrofit.Callback;
 import retrofit.http.Body;
 import retrofit.http.GET;
@@ -26,7 +26,7 @@ import retrofit.http.Query;
  */
 public interface IBackend
 {
-    String BASE_URL = "http://private-6dea31-avn.apiary-mock.com";
+    String BASE_URL = "http://private-6fb16-ampapi1.apiary-mock.com/";
 
     /**
      * Request new session token
@@ -68,15 +68,15 @@ public interface IBackend
      * @param messageDefaultCallback callback with {@link Message} data
      */
     @GET("/messages/{messageId}")
-    void requestMessage(@Query("token") String tokenString, @Path("messageId") String messageId, DefaultCallback<Message> messageDefaultCallback);
+    void requestMessage(@Query("token") String tokenString, @Path("messageId") String messageId, Callback<Message> messageDefaultCallback);
 
     /**
      * Request all events
      * @param tokenString session token
-     * @param callback callback with {@link CallendarEventsCollection}
+     * @param callback callback with {@link CalendarEventsCollection}
      */
     @GET("/events")
-    void requestAllEvents(@Query("token") String tokenString, Callback<CallendarEventsCollection> callback);
+    void requestAllEvents(@Query("token") String tokenString, Callback<CalendarEventsCollection> callback);
 
     /**
      * Request single event data
@@ -85,7 +85,7 @@ public interface IBackend
      * @param callback callback with {@link CalendarEvent data}
      */
     @GET("/events/{id}")
-    void requestEvent(@Query("token") String token, @Path("id") String eventId, DefaultCallback<CalendarEvent> callback);
+    void requestEvent(@Query("token") String token, @Path("id") String eventId, Callback<CalendarEvent> callback);
 
     /**
      * Replace stored user's profile data with the new ones
@@ -94,7 +94,7 @@ public interface IBackend
      * @param callback callback - no data
      */
     @PUT("/users/me/profile")
-    void putProfile(@Query("token") String tokenString, @Body UserProfile profile, DefaultCallback<Void> callback);
+    void putProfile(@Query("token") String tokenString, @Body UserProfile profile, Callback<Void> callback);
 
     /**
      * Request own profile data

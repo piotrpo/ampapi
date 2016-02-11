@@ -1,4 +1,4 @@
-package avnet.toolla.net.avnet.communication.backend.entities;
+package net.toolla.backend.entities;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,10 +1,10 @@
-package avnet.toolla.net.avnet.communication.backend.entities;
+package net.toolla.backend.entities;
 
 import android.util.Log;
 
 import com.google.gson.annotations.SerializedName;
 
-import avnet.toolla.net.avnet.ui.fragments.mapper.UiHint;
+import net.toolla.datamapper.UiHint;
 
 /**
  * Extended user's profile - certificates possessed by user
