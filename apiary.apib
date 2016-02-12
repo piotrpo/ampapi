@@ -51,145 +51,6 @@ Methods allowing one to receive a session token
                 "message": "User registered"
             }
 
-## Quizzes [/quizzes{?token}]
-
-+ Parameters
-    + token (String) - security token
-
-
-## Quiz content [/quizzes/{testId}{?token}]
-
-+ Parameters
-    + testId (numeric) - id of the quiz
-    + token (String) - security token
-
-### Request content of single quiz [GET]        
-        
-+ Response 200 (application/json)
-
-        {
-          "id": 1,
-          "title": "entry level test 1",
-          "questions": [
-            {
-              "id": 0,
-              "question": "What is the meaning of life?",
-              "answers": [
-                {
-                  "id": 0,
-                  "value": "Yes",
-                  "isCorrect": true
-                },
-                {
-                  "id": 1,
-                  "value": "No",
-                  "isCorrect": true
-                },
-                {
-                  "id": 2,
-                  "value": "Maybe",
-                  "isCorrect": false
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": "What is The Answer to the Ultimate Question of Life, The Universe, and Everything?",
-              "answers": [
-                {
-                  "id": 0,
-                  "value": "41",
-                  "isCorrect": false
-                },
-                {
-                  "id": 1,
-                  "value": "42",
-                  "isCorrect": true
-                },
-                {
-                  "id": 2,
-                  "value": "43",
-                  "isCorrect": false
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": "Will the first order win?",
-              "answers": [
-                {
-                  "id": 0,
-                  "value": "Yes",
-                  "isCorrect": false
-                },
-                {
-                  "id": 1,
-                  "value": "No",
-                  "isCorrect": true
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": "Will the first order win?",
-              "answers": [
-                {
-                  "id": 0,
-                  "value": "Yes",
-                  "isCorrect": false
-                },
-                {
-                  "id": 1,
-                  "value": "No",
-                  "isCorrect": true
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": "Will the first order win?",
-              "answers": [
-                {
-                  "id": 0,
-                  "value": "Yes",
-                  "isCorrect": false
-                },
-                {
-                  "id": 1,
-                  "value": "No",
-                  "isCorrect": true
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": "Will the first order win?",
-              "answers": [
-                {
-                  "id": 0,
-                  "value": "Yes",
-                  "isCorrect": false
-                },
-                {
-                  "id": 1,
-                  "value": "No",
-                  "isCorrect": true
-                }
-              ]
-            }
-        
-          ]
-        }
-        
-+ Response 401
-
-        Token not valid
-        
-+ Response 404
-
-        Resource not found
-
-
 ## Messages [/messages{?token}]
 
 + Parameters
@@ -269,7 +130,7 @@ Format of the body will TBD (Base64 encoded HTML?)
             "dateStart": "2016-01-05T18:00:00.000Z",
             "dateEnd": "2016-01-06T01:00:00.000Z",
             "name": "Cisco ASA Express Seminar - Dallas, TX",
-            "description": "his seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
+            "description": "This seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
             "place": "Avnet 2021 Lakeside Blvd Richardson, TX",
             "lineUp": "Day 1: Cisco ASA NGFW Solution Introduction - Cisco ASA with FirePOWER Policies Malware/File IPS (Snort) Access Control Network Discovery (FireSIGHT) Correlation Day 2: FirePower Continued and ASA Features ASA FirePOWER Services: Positioning and best practices ASA VPN features, positioning and best practices ASA Licensing ASA Cloud Web Security",
             "category": "WEBINARS"
@@ -279,11 +140,52 @@ Format of the body will TBD (Base64 encoded HTML?)
             "dateStart": "2016-01-05T18:00:00.000Z",
             "dateEnd": "2016-01-06T01:00:00.000Z",
             "name": "Cisco ASA Express Seminar - Dallas, TX",
-            "description": "his seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
+            "description": "This seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
+            "place": "Avnet 2021 Lakeside Blvd Richardson, TX",
+            "lineUp": "Day 1: Cisco ASA NGFW Solution Introduction - Cisco ASA with FirePOWER Policies Malware/File IPS (Snort) Access Control Network Discovery (FireSIGHT) Correlation Day 2: FirePower Continued and ASA Features ASA FirePOWER Services: Positioning and best practices ASA VPN features, positioning and best practices ASA Licensing ASA Cloud Web Security",
+            "category": "CLOUD"
+          },
+          {
+            "id":3,
+            "dateStart": "2016-01-05T18:00:00.000Z",
+            "dateEnd": "2016-01-06T01:00:00.000Z",
+            "name": "Cisco ASA Express Seminar - Dallas, TX",
+            "description": "This seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
+            "place": "Avnet 2021 Lakeside Blvd Richardson, TX",
+            "lineUp": "Day 1: Cisco ASA NGFW Solution Introduction - Cisco ASA with FirePOWER Policies Malware/File IPS (Snort) Access Control Network Discovery (FireSIGHT) Correlation Day 2: FirePower Continued and ASA Features ASA FirePOWER Services: Positioning and best practices ASA VPN features, positioning and best practices ASA Licensing ASA Cloud Web Security",
+            "category": "WEBINARS"
+          },
+          {
+            "id":4,
+            "dateStart": "2016-01-05T18:00:00.000Z",
+            "dateEnd": "2016-01-06T01:00:00.000Z",
+            "name": "Cisco ASA Express Seminar - Dallas, TX",
+            "description": "This seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
+            "place": "Avnet 2021 Lakeside Blvd Richardson, TX",
+            "lineUp": "Day 1: Cisco ASA NGFW Solution Introduction - Cisco ASA with FirePOWER Policies Malware/File IPS (Snort) Access Control Network Discovery (FireSIGHT) Correlation Day 2: FirePower Continued and ASA Features ASA FirePOWER Services: Positioning and best practices ASA VPN features, positioning and best practices ASA Licensing ASA Cloud Web Security",
+            "category": "CLOUD"
+          },
+          {
+            "id":5,
+            "dateStart": "2016-01-05T18:00:00.000Z",
+            "dateEnd": "2016-01-06T01:00:00.000Z",
+            "name": "Cisco ASA Express Seminar - Dallas, TX",
+            "description": "This seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
+            "place": "Avnet 2021 Lakeside Blvd Richardson, TX",
+            "lineUp": "Day 1: Cisco ASA NGFW Solution Introduction - Cisco ASA with FirePOWER Policies Malware/File IPS (Snort) Access Control Network Discovery (FireSIGHT) Correlation Day 2: FirePower Continued and ASA Features ASA FirePOWER Services: Positioning and best practices ASA VPN features, positioning and best practices ASA Licensing ASA Cloud Web Security",
+            "category": "WEBINARS"
+          },
+          {
+            "id":6,
+            "dateStart": "2016-01-05T18:00:00.000Z",
+            "dateEnd": "2016-01-06T01:00:00.000Z",
+            "name": "Cisco ASA Express Seminar - Dallas, TX",
+            "description": "This seminar reviews the concepts and technologies covered and included in the Cisco ASA Express Security (SAEXS) #500-260 exam. Seminar hours are 9:00am to 4:30pm each day",
             "place": "Avnet 2021 Lakeside Blvd Richardson, TX",
             "lineUp": "Day 1: Cisco ASA NGFW Solution Introduction - Cisco ASA with FirePOWER Policies Malware/File IPS (Snort) Access Control Network Discovery (FireSIGHT) Correlation Day 2: FirePower Continued and ASA Features ASA FirePOWER Services: Positioning and best practices ASA VPN features, positioning and best practices ASA Licensing ASA Cloud Web Security",
             "category": "CLOUD"
           }
+          
         ]
 
 + Response 401
@@ -652,10 +554,73 @@ Format of the body will TBD (Base64 encoded HTML?)
                 "additionalDocuments": [
                   {
                     "category": "SECURITY",
-                    "id": 0,
-                    "name": "Test pptx",
+                    "id": 1,
+                    "name": "This resource includes something to read it is pptx file",
                     "type": 0,
                     "url": "https://oit.utk.edu/instructional/strategies/toolkit/Anonymous%20Assets/sample%20PowerPoint%20presentation.pptx"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 2,
+                    "name": "This resource includes something to read it is pptx file",
+                    "type": 0,
+                    "url": "https://oit.utk.edu/instructional/strategies/toolkit/Anonymous%20Assets/sample%20PowerPoint%20presentation.pptx"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 3,
+                    "name": "This resource includes something to read it is pptx file",
+                    "type": 0,
+                    "url": "https://oit.utk.edu/instructional/strategies/toolkit/Anonymous%20Assets/sample%20PowerPoint%20presentation.pptx"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 4,
+                    "name": "This resource includes something to read it is pptx file",
+                    "type": 0,
+                    "url": "https://oit.utk.edu/instructional/strategies/toolkit/Anonymous%20Assets/sample%20PowerPoint%20presentation.pptx"
+                  },
+                  {                   
+                    "category": "SECURITY",
+                    "id": 9,
+                    "name": "This resource contains something to read it is PDF file",
+                    "type": 0,
+                    "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
+                  },
+                  {                  
+                    "category": "SECURITY",
+                    "id": 10,
+                    "name": "This resource contains something to read it is PDF file",
+                    "type": 0,
+                    "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
+                  },
+                  {                   
+                    "category": "SECURITY",
+                    "id": 5,
+                    "name": "This resource contains something to read it is PDF file",
+                    "type": 0,
+                    "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
+                  },
+                  {                  
+                    "category": "SECURITY",
+                    "id": 6,
+                    "name": "This resource contains something to read it is PDF file",
+                    "type": 0,
+                    "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
+                  },
+                  {                   
+                    "category": "SECURITY",
+                    "id": 7,
+                    "name": "This resource contains something to read it is PDF file",
+                    "type": 0,
+                    "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
+                  },
+                  {                  
+                    "category": "SECURITY",
+                    "id": 8,
+                    "name": "This resource contains something to read it is PDF file",
+                    "type": 0,
+                    "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
                   }
                 ],
                 "alreadyPassed": false,
@@ -664,19 +629,54 @@ Format of the body will TBD (Base64 encoded HTML?)
                   {
                     "category": "SECURITY",
                     "id": 1,
-                    "name": "test pdf",
+                    "name": "This resource contains something to read it is PDF file",
+                    "type": 0,
+                    "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
+                  },
+                  {                  
+                    "category": "SECURITY",
+                    "id": 2,
+                    "name": "This resource contains something to read it is PDF file",
+                    "type": 0,
+                    "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
+                  },
+                  {                   
+                    "category": "SECURITY",
+                    "id": 3,
+                    "name": "This resource contains something to read it is PDF file",
+                    "type": 0,
+                    "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
+                  },
+                  {                  
+                    "category": "SECURITY",
+                    "id": 4,
+                    "name": "This resource contains something to read it is PDF file",
                     "type": 0,
                     "url": "http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf"
                   }
                 ],
                 "previousAttempts": 0,
-                "quizId": 0,
-                "trackId": 0,
+                "trackId": 1,
                 "trackName": "Track a1",
                 "videos": [
                   {
                     "category": "SECURITY",
+                    "id": 0,
+                    "name": "Avnet + Cisco Smart Net Total Care Convergence - Youtube Video",
+                    "type": 1,
+                    "url": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 1,
+                    "name": "Avnet + Cisco Smart Net Total Care Convergence - Brainshark Video",
+                    "type": 1,
+                    "url": "https://www.brainshark.com/avnet/vu?pi=zD7zsEigDz0z0"
+                  },
+                  {
+                    "category": "SECURITY",
                     "id": 2,
+<<<<<<< HEAD
                     "name": "Youtube Video",
                     "type": 0,
                     "url": "https://www.youtube.com/watch?v=MJIuHy2J_Z8"
@@ -694,6 +694,67 @@ Format of the body will TBD (Base64 encoded HTML?)
                     "name": "Video",
                     "type": 0,
                     "url": "https://www.youtube.com/watch?v=MJIuHy2J_Z8"
+=======
+                    "name": "Avnet + Cisco Smart Net Total Care Convergence",
+                    "type": 1,
+                    "url": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 3,
+                    "name": "Avnet + Cisco Smart Net Total Care Convergence",
+                    "type": 1,
+                    "url": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 4,
+                    "name": "Avnet + Cisco Smart Net Total Care Convergence",
+                    "type": 1,
+                    "url": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 5,
+                    "name": "Avnet + Cisco Smart Net Total Care Convergence",
+                    "type": 1,
+                    "url": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 6,
+                    "name": "Avnet + Cisco Smart Net Total Care Convergence",
+                    "type": 1,
+                    "url": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 7,
+                    "name": "Avnet + Cisco Smart Net Total Care Convergence",
+                    "type": 1,
+                    "url": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 8,
+                    "name": "Video",
+                    "type": 1,
+                    "url": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 9,
+                    "name": "Video",
+                    "type": 1,
+                    "url": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+                  },
+                  {
+                    "category": "SECURITY",
+                    "id": 10,
+                    "name": "Video",
+                    "type": 1,
+                    "url": "https://www.youtube.com/watch?v=ewUTqW5ntqM"
+>>>>>>> 0089d6c791ce062793cb598a1a9500c102cfa844
                   }
                 ]
               },
@@ -701,16 +762,14 @@ Format of the body will TBD (Base64 encoded HTML?)
                 "alreadyPassed": false,
                 "attemptsLast": 0,
                 "previousAttempts": 0,
-                "quizId": 0,
-                "trackId": 0,
+                "trackId": 2,
                 "trackName": "Track a2"
               },
               {
                 "alreadyPassed": false,
                 "attemptsLast": 0,
                 "previousAttempts": 0,
-                "quizId": 0,
-                "trackId": 0,
+                "trackId": 3,
                 "trackName": "Track a3"
               }
             ]
@@ -724,24 +783,21 @@ Format of the body will TBD (Base64 encoded HTML?)
                 "alreadyPassed": false,
                 "attemptsLast": 0,
                 "previousAttempts": 0,
-                "quizId": 0,
-                "trackId": 0,
+                "trackId": 6,
                 "trackName": "track b1"
               },
               {
                 "alreadyPassed": false,
                 "attemptsLast": 0,
                 "previousAttempts": 0,
-                "quizId": 0,
-                "trackId": 0,
+                "trackId": 7,
                 "trackName": "track b2"
               },
               {
                 "alreadyPassed": false,
                 "attemptsLast": 0,
                 "previousAttempts": 0,
-                "quizId": 0,
-                "trackId": 0,
+                "trackId": 8,
                 "trackName": "track b3"
               }
             ]
@@ -751,3 +807,179 @@ Format of the body will TBD (Base64 encoded HTML?)
 + Response 401
 
         Wrong token
+        
+## Single enablement track's actions [/tracks/{id}/enable{?token}]
+
++ Parameters
+    + token (String) - security token
+    + id (Int) - id of requested track
+
+### Request acces to track by given id [POST]
+
+Action places request for access to given enablement track group. When it's done field permissionGranted in 
+
+
++ Response 200
+
+        request placed
+        
++ Response 404
+
+        No enablement track matching 
+        
++ Response 401
+
+        Wrong token
+
+## Track's exams [/tracks/{id}/exam{?token}]
+
++ Parameters
+    + token (String) - security token
+    + id (Int) - id of requested track
+
+### Report exam result [POST]
+
++ Request (application/json)
+
+        {
+            "passed"= true
+        }
+        
++ Response 200
+
+        Result placed
+        
++ Response 404
+
+        No enablement track matching 
+        
++ Response 401
+
+        Wrong token
+        
+
+### Get quizz content [GET]
+
++ Response 200 (application/json)
+
+        {
+          "id": 1,
+          "title": "entry level test 1",
+          "questions": [
+            {
+              "id": 0,
+              "question": "What is the meaning of life?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "Yes",
+                  "isCorrect": true
+                },
+                {
+                  "id": 1,
+                  "value": "No",
+                  "isCorrect": true
+                },
+                {
+                  "id": 2,
+                  "value": "Maybe",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "question": "What is The Answer to the Ultimate Question of Life, The Universe, and Everything?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "41",
+                  "isCorrect": false
+                },
+                {
+                  "id": 1,
+                  "value": "42",
+                  "isCorrect": true
+                },
+                {
+                  "id": 2,
+                  "value": "43",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "question": "Will the first order win?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "Yes",
+                  "isCorrect": false
+                },
+                {
+                  "id": 1,
+                  "value": "No",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "question": "Will the first order win?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "Yes",
+                  "isCorrect": false
+                },
+                {
+                  "id": 1,
+                  "value": "No",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "question": "Will the first order win?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "Yes",
+                  "isCorrect": false
+                },
+                {
+                  "id": 1,
+                  "value": "No",
+                  "isCorrect": true
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "question": "Will the first order win?",
+              "answers": [
+                {
+                  "id": 0,
+                  "value": "Yes",
+                  "isCorrect": false
+                },
+                {
+                  "id": 1,
+                  "value": "No",
+                  "isCorrect": true
+                }
+              ]
+            }
+        
+          ]
+        }
+
++ Response 401
+
+        Token not valid
+        
++ Response 404
+
+        Resource not found
