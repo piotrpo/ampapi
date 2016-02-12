@@ -14,4 +14,10 @@ public class Token
      */
     @SerializedName("token")
     public String tokenString = "";
+
+    /**
+     * Does user has access to internal messages center
+     */
+    @SerializedName("messageCenterAccess")
+    public boolean messageCenterAccess = false;
 }
