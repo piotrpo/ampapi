@@ -20,7 +20,8 @@ Methods allowing one to receive a session token
     + Body
 
             {
-                "token": "asda9sf987jhgiouyaisodufy"
+                "token": "asda9sf987jhgiouyaisodufy",
+                "meaasgeCenterAccess": false
             }
 
 + Response 403 
@@ -84,10 +85,15 @@ Methods allowing one to receive a session token
 + Response 401
 
         Token not valid
+        
++ Response 403
+
+        Forbiden
 
 + Response 404
 
         Resource not found
+
 
 ## Message [/messages/{messageId}{?token}]
 
